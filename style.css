@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 20px 0px;
+  background: red;
+}
+
+.grid{
+  max-width: 960px;
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card{
+  position: relative;
+  transition: all 0.4s linear;
+  transform-style: preserve-3d;
+  margin: 5px;
+  width: 150px;
+  height: 150px;
+
+}
+
+
+
+.front{
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-image: url("images/question-mark.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: white;
+  backface-visibility: hidden;
+
+}
+
+.back{
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-size: contain;
+  backface-visibility: hidden;
+  /* background-image: url("images/Black_Roses_Tinted_350.jpg") */
+}
+
+.selected{
+  transform: rotateY(180deg)
+}
